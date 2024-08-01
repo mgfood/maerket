@@ -1,0 +1,136 @@
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Задний фон по умолчанию */
+}
+
+/* Стили навигационной панели */
+#navbar {
+  background-color: #fff; /* Цвет по умолчанию */
+  padding: 10px;
+  width: 80%;
+  margin: 5px auto;
+  border-radius: 5%;
+  text-align: center;
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#navbar li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Стили футера */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #eee;
+}
+
+footer .col1,
+footer .col2,
+footer .col3 {
+  text-align: center;
+}
+
+/* Стили товаров */
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  width: calc(100% / 6); /* 6 товаров на строку на компьютере */
+  box-sizing: border-box;
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product .price {
+  font-weight: bold;
+}
+
+.available {
+  color: green;
+}
+
+.unavailable {
+  color: red;
+}
+
+/* Отзывчивость для планшетов и телефонов */
+@media (max-width: 768px) {
+  .product {
+    width: calc(100% / 4); /* 4 товара на строку на планшете */
+  }
+}
+
+@media (max-width: 480px) {
+  .product {
+    width: calc(100% / 2); /* 2 товара на строку на телефоне */
+  }
+}
+
+/* Стили для выпадающего меню */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Стили рекламы */
+.ad {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 100%; /* Реклама на всю ширину экрана */
+  box-sizing: border-box;
+}
+
+.ad img {
+  width: 100%;
+  height: 200px; /* Высота рекламы */
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}

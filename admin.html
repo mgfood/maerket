@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Панель администратора</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Панель администратора</h1>
+    <input type="password" id="password" placeholder="Введите пароль" />
+    <button id="loginBtn">Войти</button>
+
+    <div id="adminPanel" style="display: none">
+      <h2>Добавить товар</h2>
+      <form id="addProductForm">
+        <label for="name">Название:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="price">Цена:</label>
+        <input type="number" id="price" name="price" required />
+
+        <label for="currency">Валюта:</label>
+        <select id="currency" name="currency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="RUB">RUB</option>
+        </select>
+
+        <label for="date">Дата добавления:</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="image">Фото:</label>
+        <input type="file" id="image" name="image" accept="image/*" required />
+
+        <label for="available">В наличии:</label>
+        <input type="checkbox" id="available" name="available" />
+
+        <button type="submit">Добавить</button>
+      </form>
+
+      <h2>Добавить рекламу</h2>
+      <form id="addAdForm">
+        <label for="adImage">Фото:</label>
+        <input
+          type="file"
+          id="adImage"
+          name="adImage"
+          accept="image/*"
+          required
+        />
+
+        <label for="adUrl">URL:</label>
+        <input type="text" id="adUrl" name="adUrl" required />
+
+        <button type="submit">Добавить</button>
+      </form>
+
+      <h2>Удалить товар</h2>
+      <form id="deleteProductForm">
+        <label for="productName">Название товара:</label>
+        <input type="text" id="productName" name="productName" required />
+
+        <button type="submit">Удалить</button>
+      </form>
+
+      <h2>Удалить рекламу</h2>
+      <form id="deleteAdForm">
+        <label for="adUrl">URL рекламы:</label>
+        <input type="text" id="adUrl" name="adUrl" required />
+
+        <button type="submit">Удалить</button>
+      </form>
+
+      <h2>Изменить настройки</h2>
+      <label for="navbarColor">Цвет навигационной панели:</label>
+      <input type="color" id="navbarColor" value="#ffffff" />
+      <button id="changeNavbarColorBtn">Изменить</button>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
